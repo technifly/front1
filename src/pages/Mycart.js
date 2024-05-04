@@ -40,7 +40,8 @@ const Mycart = () => {
 
     console.log('Response as output::' , resp);
     if(resp.status=== 200){
-      // dispatcher({type:'Drop'})
+      // dispatcher({type:'Drop'});
+      // it is used to clear cart after adding in db
     }
   }
 
