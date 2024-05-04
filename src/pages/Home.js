@@ -1,6 +1,4 @@
-import React, { useEffect, useState } from 'react'
-import Navbar from '../components/Navbar';
-import Footer from '../components/Footer';
+import React, { useEffect, useState } from 'react';
 import Card from '../components/Card';
 
 const Home = () => {
@@ -28,13 +26,11 @@ const Home = () => {
     return (
         <>
             <div className='home'>
-                {/* <div><Navbar /></div> */}
                 <div id="carouselExampleFade" className="carousel slide carousel-fade" data-bs-ride="carousel" style={{ objectFit: "contain !important" }}>
                     <div className="carousel-inner" id='carousel'>
                         <div className='carousel-caption' style={{ zIndex: "10" }}>
                             <div className="d-flex justify-content-center">
                                 <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" value={search} onChange={(e) => { setSearch(e.target.value) }} />
-                                {/* <button className="btn btn-outline-success text-white bg-success" type="submit">Search</button> */}
                             </div>
                         </div>
                         <div className="carousel-item active">
@@ -84,7 +80,7 @@ const Home = () => {
                     }
 
                 </div>
-                <div><Footer /></div>
+                
 
             </div>
 
@@ -92,4 +88,4 @@ const Home = () => {
     )
 }
 
-export default Home
+export default Home;

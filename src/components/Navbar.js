@@ -1,15 +1,12 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import Badge from 'react-bootstrap/Badge';
-import Modal from '../Modal';
-import Mycart from '../pages/Mycart';
 import { useCart } from '../context/FoodContext';
 
 const Navbar = () => {
     let user = useCart();
     const navigate = useNavigate();
-    // const [view, setView] = useState(false)
 
     const handlemycart=()=>{
         navigate('/cart')
@@ -33,14 +30,7 @@ const Navbar = () => {
                             <li className="nav-item" >
                                 <Link className="nav-link active fs-5" aria-current="page" to="/">Home</Link>
                             </li>
-                            {/* {
-                                (localStorage.getItem("auth")) ?
-                                    <li className="nav-item" >
-                                        <Link className="nav-link  fs-5" aria-current="page" to="/">My-Orders</Link>
-                                    </li>
-                                    :
-                                    ""
-                            } */}
+                            
                         </ul>
                         {(!localStorage.getItem("auth")) ?
                             <div className='d-flex'>
@@ -56,9 +46,7 @@ const Navbar = () => {
                             MyCart {" "}
                             <Badge pill bg="danger">{user.length}</Badge>
                         </div>
-                        {/* {
-                            view ? <Modal onclose={() => setView(false)}><Mycart /></Modal> : null
-                        } */}
+                        
                         {
                             (localStorage.getItem("auth")) ?
 

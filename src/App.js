@@ -1,6 +1,5 @@
 import React from 'react';
 import Footer from './components/Footer';
-// import './App.css';
 import { Routes, Route } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
@@ -23,8 +22,9 @@ function App() {
           <Route path='/login' element={<Login />} />
           <Route path='/footer' element={<Footer />} />
           <Route path='/signup' element={<Signup />} />
-          <Route path='cart' element={<Mycart/>}/>
+          <Route path='/cart' element={<Mycart/>}/>
         </Routes>
+        <Footer/>
       </FoodProvider>
     </>
   );
