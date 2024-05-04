@@ -8,7 +8,7 @@ orderrouter.post('/order',
     async (req, res) => {
         
         let data = req.body.orderdata;
-        await data.splice(0, 0, { Order_date: req.body.order_date });
+        await data.splice(0, 0, { Order_date: req.body.order_date }); // splice used for get data from req body
 
         let emailid = await Order.findOne({'email':req.body.email });
         // console.log(emailid);
